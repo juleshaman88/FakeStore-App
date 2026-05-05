@@ -2,8 +2,8 @@ import { Container, Carousel, Row, Col } from 'react-bootstrap'
 
 function HomePage () {
     return (
-        <Container class = "container-fluid">
-            <Row className="my-4">
+        <Container fluid>
+            <Row className="my-4 px-3">
                 <Col>
                     <h1>Welcome to FakeStore</h1>
                     <p>This app will let you browse, view, edit, and delete all products through the FakeStore API.</p>
@@ -11,7 +11,7 @@ function HomePage () {
                 </Col>
             </Row>
             <Row> 
-                <Col>
+                <Col className="p-0">
                     <Carousel>
                         <Carousel.Item>
                             <img className="d-block w-100" src="https://picsum.photos/1700/600?random=1" alt="First slide" />

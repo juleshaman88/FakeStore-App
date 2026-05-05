@@ -1,19 +1,27 @@
-import { NavLink } from 'react-router-dom'
-import Navbar from 'react-bootstrap/Navbar'
-import Nav from 'react-bootstrap/Nav'
+import { NavLink } from 'react-router-dom';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
 
 function NavBar() {
-    return (
-        <Navbar bg="info" variant="dark" expand="lg" className="p-3 mb-4">
-            <Navbar.Brand as={NavLink} to="/">FakeStore</Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />  
-             <Nav>
-                <Nav.Link as={NavLink} to="/">Home</Nav.Link>
-                <Nav.Link as={NavLink} to="/products">Products</Nav.Link>
-                <Nav.Link as={NavLink} to="/add-product">Add Product</Nav.Link>
-             </Nav>
-        </Navbar>
-    );
+  return (
+    <Navbar bg="success" variant="dark" expand="lg" className="p-3 mb-4">
+      <Navbar.Brand href="/">FakeStore App</Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav>
+          <Nav.Link as={NavLink} to="/" activeclassname="active">
+            Home
+          </Nav.Link>
+          <Nav.Link as={NavLink} to="/products" activeclassname="active">
+            Products
+          </Nav.Link>
+          <Nav.Link as={NavLink} to="/products/new" activeclassname="active">
+            Add Product
+          </Nav.Link>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
+  );
 }
 
-export default NavBar
+export default NavBar;

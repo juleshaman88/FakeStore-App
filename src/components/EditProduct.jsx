@@ -61,6 +61,14 @@ const EditProduct = () => {
         setError(null)
         setSuccess('')
 
+        const isFormIncomplete = Object.values(formData).some((value) => value.trim() === '')
+        if (isFormIncomplete) {
+            setError('Please fill in all fields before saving.')
+            return
+        }
+
+        setSaving(true)
+
         try {
             const payload = {
                 ...formData,
